@@ -1,6 +1,24 @@
 import json
 import os
+import smtplib
+from email.mime.text import MIMEText
 import psycopg2
+
+NOTIFY_EMAIL = 'orobey@inbox.ru'
+
+
+def send_notification(name: str, phone: str, message: str) -> None:
+    password = os.environ.get('SMTP_PASSWORD')
+    if not password:
+        return
+    body = f'Новая заявка на консультацию\n\nИмя: {name}\nТелефон: {phone}\nСообщение: {message or "—"}'
+    msg = MIMEText(body, _charset='utf-8')
+    msg['Subject'] = 'Новая заявка с сайта'
+    msg['From'] = NOTIFY_EMAIL
+    msg['To'] = NOTIFY_EMAIL
+    with smtplib.SMTP_SSL('smtp.mail.ru', 465) as server:
+        server.login(NOTIFY_EMAIL, password)
+        server.sendmail(NOTIFY_EMAIL, [NOTIFY_EMAIL], msg.as_string())
 
 
 def handler(event: dict, context) -> dict:
@@ -48,6 +66,11 @@ def handler(event: dict, context) -> dict:
     conn.commit()
     cur.close()
     conn.close()
+
+    try:
+        send_notification(name, phone, message)
+    except Exception:
+        pass
 
     return {
         'statusCode': 200,
