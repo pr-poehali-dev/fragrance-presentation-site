@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
+import LeadForm from '@/components/LeadForm';
 
 const HERO_IMG = 'https://cdn.poehali.dev/projects/acd56529-1444-4bb4-b0ae-ee29374dadf4/files/87610b6b-b106-4488-98c7-2b875960332a.jpg';
 
@@ -200,30 +201,7 @@ const Index = () => {
               </div>
             </div>
 
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-              <p className="font-serif text-2xl text-stone-100 mb-4">Записаться на консультацию</p>
-              <input
-                type="text"
-                placeholder="Ваше имя"
-                className="w-full bg-transparent border-b border-gold/30 py-4 text-stone-200 placeholder:text-stone-500 focus:border-gold outline-none transition-colors"
-              />
-              <input
-                type="tel"
-                placeholder="Телефон"
-                className="w-full bg-transparent border-b border-gold/30 py-4 text-stone-200 placeholder:text-stone-500 focus:border-gold outline-none transition-colors"
-              />
-              <textarea
-                rows={3}
-                placeholder="Сообщение"
-                className="w-full bg-transparent border-b border-gold/30 py-4 text-stone-200 placeholder:text-stone-500 focus:border-gold outline-none transition-colors resize-none"
-              />
-              <button
-                type="submit"
-                className="w-full mt-4 px-9 py-4 bg-gold text-noir text-xs uppercase tracking-[0.2em] font-medium hover:bg-gold-light transition-colors duration-300"
-              >
-                Отправить заявку
-              </button>
-            </form>
+            <LeadForm />
           </div>
         </div>
       </section>
