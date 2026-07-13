@@ -198,6 +198,18 @@ const Index = () => {
                 </div>
               </a>
 
+              <a href="mailto:orobey@inbox.ru" className="flex items-start gap-5 group">
+                <div className="w-12 h-12 flex items-center justify-center border border-gold/30 shrink-0 group-hover:bg-gold group-hover:text-noir transition-colors duration-300">
+                  <Icon name="Mail" size={20} className="text-gold group-hover:text-noir transition-colors duration-300" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gold mb-1">Почта</p>
+                  <p className="font-serif text-xl text-stone-100 group-hover:text-gold transition-colors duration-300">
+                    orobey@inbox.ru
+                  </p>
+                </div>
+              </a>
+
               <a
                 href="https://clck.ru/3U5LRa"
                 target="_blank"
