@@ -61,6 +61,15 @@ const Index = () => {
                 {l.label}
               </button>
             ))}
+            <a
+              href="https://clck.ru/3U5LRa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 border border-gold/40 text-gold text-xs uppercase tracking-[0.2em] hover:bg-gold hover:text-noir transition-colors duration-300"
+            >
+              <Icon name="Send" size={14} />
+              Телеграм
+            </a>
           </nav>
           <button className="lg:hidden text-gold" onClick={() => setMenuOpen(!menuOpen)}>
             <Icon name={menuOpen ? 'X' : 'Menu'} size={26} />
@@ -77,6 +86,15 @@ const Index = () => {
                 {l.label}
               </button>
             ))}
+            <a
+              href="https://clck.ru/3U5LRa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-2.5 border border-gold/40 text-gold text-sm uppercase tracking-[0.2em]"
+            >
+              <Icon name="Send" size={16} />
+              Телеграм
+            </a>
           </nav>
         )}
       </header>
