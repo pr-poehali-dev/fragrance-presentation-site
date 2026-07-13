@@ -176,29 +176,36 @@ const Index = () => {
           <SectionHeading eyebrow="Свяжитесь с нами" title="Контакты" />
           <div className="grid md:grid-cols-2 gap-16 mt-16">
             <div className="space-y-8">
-              {[
-                { icon: 'MapPin', t: 'Бутик', d: 'Москва, Столешников переулок, 12' },
-                { icon: 'Phone', t: 'Телефон', d: '+7 (495) 000-00-00' },
-                { icon: 'Mail', t: 'Почта', d: 'concierge@maisondor.ru' },
-                { icon: 'Clock', t: 'Режим работы', d: 'Ежедневно с 10:00 до 22:00' },
-              ].map((c) => (
-                <div key={c.t} className="flex items-start gap-5">
-                  <div className="w-12 h-12 flex items-center justify-center border border-gold/30 shrink-0">
-                    <Icon name={c.icon} size={20} className="text-gold" />
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-gold mb-1">{c.t}</p>
-                    <p className="font-serif text-xl text-stone-100">{c.d}</p>
-                  </div>
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 flex items-center justify-center border border-gold/30 shrink-0">
+                  <Icon name="MapPin" size={20} className="text-gold" />
                 </div>
-              ))}
-              <div className="flex gap-4 pt-2">
-                {['Instagram', 'Send', 'Facebook'].map((s) => (
-                  <button key={s} className="w-11 h-11 flex items-center justify-center border border-gold/30 text-gold hover:bg-gold hover:text-noir transition-colors duration-300">
-                    <Icon name={s} size={18} />
-                  </button>
-                ))}
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gold mb-1">Город</p>
+                  <p className="font-serif text-xl text-stone-100">Новосибирск</p>
+                </div>
               </div>
+
+              <a href="https://clck.ru/3U5LRa" target="_blank" rel="noopener noreferrer" className="flex items-start gap-5 group">
+                <div className="w-12 h-12 flex items-center justify-center border border-gold/30 shrink-0 group-hover:bg-gold group-hover:text-noir transition-colors duration-300">
+                  <Icon name="Send" size={20} className="text-gold group-hover:text-noir transition-colors duration-300" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gold mb-1">Телеграм</p>
+                  <p className="font-serif text-xl text-stone-100 group-hover:text-gold transition-colors duration-300">
+                    Написать для заявки
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="https://clck.ru/3U5LRa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 flex items-center justify-center border border-gold/30 text-gold hover:bg-gold hover:text-noir transition-colors duration-300"
+              >
+                <Icon name="Send" size={18} />
+              </a>
             </div>
 
             <LeadForm />
