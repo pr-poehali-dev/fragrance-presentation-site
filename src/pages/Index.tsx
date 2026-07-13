@@ -191,9 +191,9 @@ const Index = () => {
                   <Icon name="Send" size={20} className="text-gold group-hover:text-noir transition-colors duration-300" />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-gold mb-1">Телеграм</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-gold mb-1">Наш Телеграм-канал</p>
                   <p className="font-serif text-xl text-stone-100 group-hover:text-gold transition-colors duration-300">
-                    Написать для заявки
+                    Перейти в канал
                   </p>
                 </div>
               </a>
